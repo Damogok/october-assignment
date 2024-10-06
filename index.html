@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+// 1. Email Validation: 
+// Check if a user input string is a valid email format (eg: example@mail.com). 
+// Output "email is valid" if valid or "invalid email" otherwise. 
+
+
+let email = "adegoke_adedamola@mail.com"
+
+if (email.endsWith("@gmail.com") || email.endsWith("@yahoo.com") || email.endsWith("@mail.com")){
+console.log("this is a valid email")
+                  }
+else{
+  console.log("this is not a valid email")
+}
+
+
+// 2. Password Strength Checker: 
+// Write a password checker program that ensure a password contains at least one 
+// uppercase letter as the last letter, one lowercase letter as the first 
+// letter, and one number 0 anywhere. Output "strong password" if yes and 
+// "weak password", otherwise. 
+
+let MustPassword = "jud0itH"
+
+let lastLetterCap = MustPassword.charAt(MustPassword.length - 1) === MustPassword.charAt(MustPassword.length - 1).toUpperCase()
+let firstLetterCap = MustPassword.charAt(0) === MustPassword.charAt(0).toLowerCase()
+let includesZero = MustPassword.includes(0)
+
+if (lastLetterCap && firstLetterCap && includesZero) {
+  console.log("strong password")
+}
+else{
+  console.log("weak password")
+}
+
+
+//  3. URL Protocol Detection: 
+// Check if a URL starts with "http://" or "https://".
+
+// let urlLink = "http://google.com"
+
+if (urlLink.startsWith("http://")){
+  console.log("not a secure server")
+}else if (urlLink.startsWith("https://"))
+  console.log("secured server")
+
+
+
+// 4. Palindrome detector: 
+// Verify if a given string is a palindrome 
+// (ie: it reads the same forward and backward eg, "mum", "level"). 
+
+let palindrome = "madam"
+
+if (palindrome.substring(0) === palindrome.charAt(palindrome.length - 1) + palindrome.charAt(palindrome.length - 2) + palindrome.charAt(palindrome.length - 3) + palindrome.charAt(palindrome.length - 4) + palindrome.charAt(palindrome.length - 5) + palindrome.charAt(palindrome.length - 6) + palindrome.charAt(palindrome.length - 7)){
+  console.log("it is a palindrome")
+}else{
+  console.log("it is not a palindrome")
+}
+
+
+
+// 5. Username Length Validation: 
+// Write a program that ensures a username is between 5 and 15 characters. 
+
+let username = "Junaid"
+
+if (username.length >= 5 && username.length <= 15){
+  console.log("username length is perfect")
+}
+else{
+  console.log("username must be between 5 and 15 characters")
+}
+
+
+// 6. Case Conversion in Messages: 
+// Write a program that automatically capitalizes the first letter of a user's name input. 
+
+let okWord = "adele"
+let capFirstLetter = okWord.charAt(0).toUpperCase()
+console.log(capFirstLetter + okWord.substring(1))
+
+
+// 7. Detect File Type from Extension: 
+// Write a program that identifies if a file is a specific type 
+// (e.g., ".jpg", ".png") based on its extension, and then 
+// outputs the type of file eg: "it is a JPG file" or "it is an MP3 file".
+
+
+let fileType = "goofy.mp3"
+
+if (fileType.endsWith(".jpg")){
+  console.log("it is a JPG file")
+}
+else if (fileType.endsWith(".mp3")){
+  console.log("it is a MP3 file")
+}
+else if (fileType.endsWith(".png")){
+  console.log("it is a PNG file")
+}
+else{
+  console.log("unknown file type")
+}
+  
+
+
+//  8. Sanitize User phone Input: 
+// Write a program that accepts phone number and country of origin from users.
+// Phone number input must be 11 digits long and start with 0.
+// Remove any leading or trailing spaces from a user input string, add the 
+// country code +234 if the user is a Nigerian, +233 if use is Ghanaian or 
+// +44 if user is British. Output a string that reads, "As you're Nigerian, 
+// your full phone number is +234 809123457", etc.
+
+let phoneNumber = "08189852429"
+
+let nigeriaCode = "+234"
+let ghanaCode = "+233"
+let britishCode = "+44"
+
+let nigeriaNumber = nigeriaCode + phoneNumber.slice(1).trim()
+console.log(nigeriaNumber)
+
+let ghanaNumber = ghanaCode + phoneNumber.slice(1).trim()
+console.log(ghanaNumber)
+
+let britishNumber = britishCode + phoneNumber.slice(1).trim()
+console.log(britishNumber)
+
+// 9. Forbidden Words Bot: 
+// Write a bot that checks if a user message contains any forbidden word like 
+// “bad” or “spam.” and substitute them with nicer synonyms or with "**" 
+// that is the same length as the bad word.
+
+
+let forbiddenWord = "spam"
+
+if (forbiddenWord === "bad" || forbiddenWord === "spam" || forbiddenWord === "Holla"){
+  if (forbiddenWord.length === 3)
+  console.log("*".repeat(3))
+  else if (forbiddenWord.length === 4)
+  console.log("*".repeat(4))
+  else if (forbiddenWord.length === 5)
+  console.log("*".repeat(5))
+}else{
+  console.log("it is not a forbidden word")
+}
+
+
+// 10. Scores Grader: 
+// Write a program that determines the grade of students in a test. Grade A is for 
+// score between 75 and 100, B is for score between 60 and 70, C if for scores 
+// between 50 and 60. Scores below 50 are advised to retake exam.
+
+let score = 10
+
+if (score >= 75 && score <= 100){
+  console.log("Grade A")
+}
+else if (score >= 60 && score <= 74){
+  console.log("Grade B")
+}
+else if (score >= 50 && score <= 59){
+  console.log("Grade C")
+}else{
+  console.log("Scores below 50 are advised to retake exam")
+}
+
+</script>
+
+
+</body>
+</html>
